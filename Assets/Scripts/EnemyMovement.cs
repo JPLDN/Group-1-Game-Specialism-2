@@ -5,37 +5,30 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float moveSpeed = 3f;
-    public Vector3 targetPosition;
-    // Start is called before the first frame update
+    private Transform player;
+    private bool isMoving = false;
+
     void Start()
     {
-        SetNewTargetPosition();
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+        if (player == null)
+        {
+            Debug.LogError("Player not found!");
+        }
     }
 
     public void StartMoving()
     {
-        SetNewTargetPosition();
-    }
-
-    void SetNewTargetPosition()
-    {
-        Camera mainCamera = Camera.main;
-        float screenHeight = mainCamera.orthographicSize * 2;
-        float screenWidth = screenHeight * mainCamera.aspect;
-
-        targetPosition = new Vector3(Random.Range(-screenWidth / 2, screenWidth / 2), Random.Range(-screenHeight / 2, screenHeight / 2), 0f);
+        isMoving = true; 
     }
 
     void Update()
     {
-        if (targetPosition != null)
+        if (isMoving && player != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
-            {
-                SetNewTargetPosition();
-            }
+            
+            transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
     }
 }

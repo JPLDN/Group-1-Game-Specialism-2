@@ -7,6 +7,7 @@ public class EnemySpawn : MonoBehaviour
     public GameObject enemyPrefab;
     public float spawnInterval = 2f;
     public int enemiesToSpawnAtOnce = 3;
+    public float spawnDistanceFromCamera = 10f;
 
     private Camera mainCamera;
 
@@ -38,17 +39,26 @@ public class EnemySpawn : MonoBehaviour
             float screenHeight = mainCamera.orthographicSize * 2;
             float screenWidth = screenHeight * mainCamera.aspect;
 
-            Vector3 offScreenPosition = new Vector3(Random.Range(-screenWidth - 5f, screenWidth + 5f), Random.Range(-screenHeight - 5f, screenHeight + 5f), 0f);
+            Vector3 cameraPos = mainCamera.transform.position;
 
-            GameObject enemy = Instantiate(enemyPrefab, offScreenPosition, Quaternion.identity);
+            float spawnX = cameraPos.x + (screenWidth / 2) + spawnDistanceFromCamera;
+            float spawnY = Random.Range(cameraPos.y - screenHeight / 2, cameraPos.y + screenHeight / 2);
 
-            enemy.GetComponent<EnemyMovement>().StartMoving();
+            Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0f);
+
+            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+
+            EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
+            if (enemyMovement != null)
+            {
+                enemyMovement.StartMoving();
+            }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
