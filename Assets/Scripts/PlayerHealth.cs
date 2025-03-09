@@ -18,13 +18,12 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damageTaken)
     {
         currentHealth -= damageTaken;
+        UpdateHearts(currentHealth);
 
         if (currentHealth <= 0)
         {
             // Death process here
-            
         }
-        UpdateHearts(currentHealth);
     }
 
     public void Heal(int healthObtained)
@@ -33,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth += healthObtained;
         }
+
         UpdateHearts(currentHealth);
     }
 
