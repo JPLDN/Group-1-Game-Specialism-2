@@ -288,8 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f6c11c1d183b64984d1cc17a845b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectDuration: 5
-  playerTag: Player
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +579,7 @@ Transform:
   m_GameObject: {fileID: 1871136216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.3, y: -1.94, z: -10.1}
+  m_LocalPosition: {x: -17.3, y: -1.94, z: 0}
   m_LocalScale: {x: 2.5415, y: 2.5415, z: 2.5415}
   m_ConstrainProportionsScale: 0
   m_Children:
