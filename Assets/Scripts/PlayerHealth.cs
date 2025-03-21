@@ -7,7 +7,9 @@ public class PlayerHealth : MonoBehaviour
 {
     public int totalHealth = 3;
     public int currentHealth;
+    public bool shieldStatus = false;
     public Image[] hearts;
+    public Image shield;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +17,23 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = totalHealth;
     }
 
+    void Update()
+    {
+        UpdateHealth(currentHealth);
+    }
+
     public void TakeDamage(int damageTaken)
     {
-        currentHealth -= damageTaken;
-        UpdateHearts(currentHealth);
+        if (shieldStatus == false)
+        {
+            currentHealth -= damageTaken;
+            UpdateHealth(currentHealth);
+        }
+        else
+        {
+            shieldStatus = false;
+            UpdateHealth(currentHealth);
+        }
 
         if (currentHealth <= 0)
         {
@@ -33,14 +48,23 @@ public class PlayerHealth : MonoBehaviour
             currentHealth += healthObtained;
         }
 
-        UpdateHearts(currentHealth);
+        UpdateHealth(currentHealth);
     }
 
-    public void UpdateHearts(int currentHealth)
+    public void UpdateHealth(int currentHealth)
     {
         for (int i = 0; i < hearts.Length; i++)
         {
             hearts[i].enabled = (i < currentHealth);
+        }
+
+        if (shieldStatus == true)
+        {
+            shield.enabled = true;
+        }
+        else
+        {
+            shield.enabled = false;
         }
     }
 }
