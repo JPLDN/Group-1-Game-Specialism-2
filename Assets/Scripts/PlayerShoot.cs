@@ -6,14 +6,21 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shootingPoint;
-    public float fireRate = 0.5f;
+    public float defaultFireRate = 0.15f;
+    public float fireRate = 0.15f;
 
     private float nextFireTime = 0f;
     private bool spreadShotEnabled = false;
+    private bool isFireRateBoosted = false;
+
+    private void Start()
+    {
+        fireRate = defaultFireRate;
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFireTime)
+        if (Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
@@ -22,43 +29,58 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
+        Debug.Log("Shooting! Spread Shot Enabled: " + spreadShotEnabled);
+
         if (spreadShotEnabled)
         {
-            FireBullet(Vector2.up * 0.2f);
-            FireBullet(Vector2.zero);
-            FireBullet(Vector2.down * 0.2f);
+            Debug.Log("Spread shot active! Shooting 3 bullets.");
+
+           
+            FireBullet(shootingPoint.forward);
+            FireBullet(Quaternion.Euler(0, 15, 0) * shootingPoint.forward);
+            FireBullet(Quaternion.Euler(0, -15, 0) * shootingPoint.forward);
         }
         else
         {
-            FireBullet(Vector2.zero);
+            FireBullet(shootingPoint.forward);
         }
     }
 
-    private void FireBullet(Vector2 directionOffset)
+    private void FireBullet(Vector3 direction)
     {
-        GameObject newBullet = Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+        GameObject newBullet = Instantiate(bullet, shootingPoint.position, Quaternion.LookRotation(direction));
         Rigidbody rb = newBullet.GetComponent<Rigidbody>();
+
         if (rb != null)
         {
-            Vector2 direction = (Vector2.right + directionOffset).normalized;
-            rb.velocity = direction * 5f;
+            rb.velocity = direction.normalized * 10f;
         }
+
+        Debug.Log("Bullet Fired with direction: " + direction);
     }
 
     public void EnableSpreadShot()
     {
+        Debug.Log("Spread Shot Picked Up!");
         spreadShotEnabled = true;
     }
 
-    public void StartFireRateBoost()
+    public void StartFireRateBoost(float duration, float multiplier)
     {
-        StartCoroutine(IncreaseFireRate(duration, multiplier));
+        if (!isFireRateBoosted)
+        {
+            StartCoroutine(IncreaseFireRate(duration, multiplier));
+        }
     }
 
     private IEnumerator IncreaseFireRate(float duration, float multiplier)
     {
+        isFireRateBoosted = true;
         fireRate /= multiplier;
         yield return new WaitForSeconds(duration);
-        fireRate *= multiplier;
+        fireRate = defaultFireRate;
+        isFireRateBoosted = false;
     }
 }
+
+

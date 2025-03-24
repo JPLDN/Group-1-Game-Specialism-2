@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 319649070}
   - component: {fileID: 319649069}
   - component: {fileID: 319649068}
-  - component: {fileID: 319649067}
+  - component: {fileID: 319649072}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -308,18 +308,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &319649067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319649066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e29378a99c86ea4b8257e90d5f6cada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &319649068
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -406,6 +394,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &319649072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319649066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74cd3f1e2c5311248b4a4e6aeae59dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,7 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3685201238639796734, guid: c9b1842c1bf491040b3f245c2c2775c8, type: 3}
   shootingPoint: {fileID: 2103118686}
-  fireRate: 0.1
+  defaultFireRate: 0.1
+  fireRate: 0.15
 --- !u!114 &1871136225
 MonoBehaviour:
   m_ObjectHideFlags: 0

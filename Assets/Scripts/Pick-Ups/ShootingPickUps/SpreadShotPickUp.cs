@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireRatePickUp : MonoBehaviour
+public class SpreadShotPickUp : MonoBehaviour
 {
-    public float duration = 5f;
-    public float fireRateMultiplier = 2f;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -14,7 +11,8 @@ public class FireRatePickUp : MonoBehaviour
             PlayerShoot playerShoot = other.GetComponent<PlayerShoot>();
             if (playerShoot != null)
             {
-                playerShoot.StartFireRateBoost(duration, fireRateMultiplier);
+                Debug.Log("SpreadShot pickup triggered");
+                playerShoot.EnableSpreadShot();
             }
             Destroy(gameObject);
         }
