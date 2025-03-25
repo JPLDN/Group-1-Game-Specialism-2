@@ -17,11 +17,6 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = totalHealth;
     }
 
-    void Update()
-    {
-        UpdateHealth(currentHealth);
-    }
-
     public void TakeDamage(int damageTaken)
     {
         if (shieldStatus == false)
@@ -37,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            // Death process here
+            Time.timeScale = 0;
         }
     }
 
