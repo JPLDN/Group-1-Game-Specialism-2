@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public bool shieldStatus = false;
     public Image[] hearts;
-    public Image shield;
+    public Image shield; // look text woooooo
 
     // Start is called before the first frame update
     void Start()
