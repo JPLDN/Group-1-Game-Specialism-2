@@ -14,22 +14,6 @@ public class SceneSwitcher : MonoBehaviour
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void StartButton()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public void SettingsButton()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void QuitButton()
-    {
-        Debug.Log("Quit");
-        Application.Quit();
-    }
-
     public void SwitchScene()
     {
         // Switches to the next scene in the index

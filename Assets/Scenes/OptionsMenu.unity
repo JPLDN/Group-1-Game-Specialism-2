@@ -920,6 +920,7 @@ GameObject:
   - component: {fileID: 457943092}
   - component: {fileID: 457943091}
   - component: {fileID: 457943090}
+  - component: {fileID: 457943093}
   m_Layer: 5
   m_Name: ControlsSelect
   m_TagString: Untagged
@@ -1041,6 +1042,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457943088}
   m_CullTransparentMesh: 1
+--- !u!114 &457943093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457943088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949764e9a38bfbe4599ea50ccdd443a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPanels: []
 --- !u!1 &509309205
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,6 +3148,7 @@ GameObject:
   - component: {fileID: 1643353885}
   - component: {fileID: 1643353884}
   - component: {fileID: 1643353883}
+  - component: {fileID: 1643353886}
   m_Layer: 5
   m_Name: MusicSelect
   m_TagString: Untagged
@@ -3255,6 +3270,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643353881}
   m_CullTransparentMesh: 1
+--- !u!114 &1643353886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643353881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949764e9a38bfbe4599ea50ccdd443a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPanels: []
 --- !u!1 &1689966327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,6 +3295,7 @@ GameObject:
   - component: {fileID: 1689966331}
   - component: {fileID: 1689966330}
   - component: {fileID: 1689966329}
+  - component: {fileID: 1689966332}
   m_Layer: 5
   m_Name: AccessSelect
   m_TagString: Untagged
@@ -3388,6 +3417,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689966327}
   m_CullTransparentMesh: 1
+--- !u!114 &1689966332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689966327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949764e9a38bfbe4599ea50ccdd443a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPanels: []
 --- !u!1 &1716483483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +3906,7 @@ GameObject:
   - component: {fileID: 1896305137}
   - component: {fileID: 1896305136}
   - component: {fileID: 1896305135}
+  - component: {fileID: 1896305138}
   m_Layer: 5
   m_Name: SoundSelect
   m_TagString: Untagged
@@ -3985,6 +4028,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896305133}
   m_CullTransparentMesh: 1
+--- !u!114 &1896305138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896305133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949764e9a38bfbe4599ea50ccdd443a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPanels: []
 --- !u!1 &1931713198
 GameObject:
   m_ObjectHideFlags: 0
