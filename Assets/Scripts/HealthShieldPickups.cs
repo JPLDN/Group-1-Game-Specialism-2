@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldPickup : MonoBehaviour
+public class HealthShieldPickups : MonoBehaviour
 {
     private Rigidbody rb;
     private PlayerHealth playerHealth;
@@ -16,7 +16,12 @@ public class ShieldPickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ShieldItem"))
+        if (other.CompareTag("HealthItem"))
+        {
+            Destroy(other.gameObject);
+            playerHealth.Heal(1);
+        }
+        else if (other.CompareTag("ShieldItem"))
         {
             Destroy(other.gameObject);
             playerHealth.ActivateShield();

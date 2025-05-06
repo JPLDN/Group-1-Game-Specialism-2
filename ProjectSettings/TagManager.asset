@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - ShieldItem
+  - HealthItem
   layers:
   - Default
   - TransparentFX
