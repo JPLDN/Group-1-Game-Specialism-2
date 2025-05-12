@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - ShieldItem
+  - HealthItem
   layers:
   - Default
   - TransparentFX
