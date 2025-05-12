@@ -60,9 +60,4 @@ public class BothSideSpawners : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
