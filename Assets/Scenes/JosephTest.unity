@@ -524,7 +524,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898734676}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16daa59f3c928b44dbdf9fb1e52d573e, type: 3}
   m_Name: 
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9795549ec256438f1b26323178bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3685201238639796734, guid: c9b1842c1bf491040b3f245c2c2775c8, type: 3}
+  bullet: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
   shootingPoint: {fileID: 2103118686}
   defaultFireRate: 0.1
   fireRate: 0.15
@@ -858,7 +858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103118685}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.88, y: 0.60594136, z: 0}
   m_LocalScale: {x: 0.3934684, y: 0.3934684, z: 0.3934684}
   m_ConstrainProportionsScale: 0

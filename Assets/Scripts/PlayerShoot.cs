@@ -37,8 +37,8 @@ public class PlayerShoot : MonoBehaviour
 
            
             FireBullet(shootingPoint.forward);
-            FireBullet(Quaternion.Euler(0, 15, 0) * shootingPoint.forward);
-            FireBullet(Quaternion.Euler(0, -15, 0) * shootingPoint.forward);
+            FireBullet(Quaternion.Euler(0, 30, 0) * shootingPoint.forward);
+            FireBullet(Quaternion.Euler(0, -30, 0) * shootingPoint.forward);
         }
         else
         {
@@ -81,6 +81,8 @@ public class PlayerShoot : MonoBehaviour
         fireRate = defaultFireRate;
         isFireRateBoosted = false;
     }
+
+
 }
 
 
