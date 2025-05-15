@@ -44,6 +44,18 @@ public class PlayerShoot : MonoBehaviour
         {
             FireBullet(shootingPoint.forward);
         }
+        Vector3 baseDir = shootingPoint != null
+                      ? shootingPoint.right
+                      : Vector3.right;
+
+        var dirs = new[] {
+    baseDir,
+    Quaternion.Euler(0f,0f,30f) * baseDir,
+    Quaternion.Euler(0f,0f,-30f)* baseDir
+};
+
+        foreach (var d in dirs)
+            Debug.Log($"Dir = {d}");
     }
 
     private void FireBullet(Vector3 direction)
