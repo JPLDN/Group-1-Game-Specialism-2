@@ -14,6 +14,7 @@ public class HealthShieldPickups : MonoBehaviour
         playerHealth = GetComponent<PlayerHealth>();
     }
 
+    // Heals player or activates shield based on object tag
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("HealthItem"))

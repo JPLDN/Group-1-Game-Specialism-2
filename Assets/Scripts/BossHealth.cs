@@ -13,10 +13,12 @@ public class BossHealth : MonoBehaviour
         totalHealth = currentHealth;
     }
     
+    // Boss takes damage when attacked by player
     public void TakeDamage(int damageTaken)
     {
         currentHealth -= damageTaken;
 
+        // Kills boss when health reaches 0
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
