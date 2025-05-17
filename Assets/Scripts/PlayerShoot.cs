@@ -15,9 +15,12 @@ public class PlayerShoot : MonoBehaviour
     private bool spreadShotEnabled = false;
     private bool isFireRateBoosted = false;
 
+    private PlayerMovement playerMovement;
+
     private void Start()
     {
         fireRate = defaultFireRate;
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -33,20 +36,20 @@ public class PlayerShoot : MonoBehaviour
     {
         Debug.Log("Shooting! Spread Shot Enabled: " + spreadShotEnabled);
 
+        // Determine shooting direction
+        Vector3 baseDirection = playerMovement.IsFaceRight ? shootingPoint.right : -shootingPoint.right;
+
         if (spreadShotEnabled)
         {
             Debug.Log("Spread shot active! Shooting 3 bullets.");
-
-           
-            FireBullet(shootingPoint.right);
-            FireBullet(Quaternion.Euler(0, 0, 30) * shootingPoint.right);
-            FireBullet(Quaternion.Euler(0, 0, -30) * shootingPoint.right);
+            FireBullet(baseDirection);
+            FireBullet(Quaternion.Euler(0, 0, 30) * baseDirection);
+            FireBullet(Quaternion.Euler(0, 0, -30) * baseDirection);
         }
         else
         {
-            FireBullet(shootingPoint.right);
+            FireBullet(baseDirection);
         }
-
     }
 
     private void FireBullet(Vector3 direction)

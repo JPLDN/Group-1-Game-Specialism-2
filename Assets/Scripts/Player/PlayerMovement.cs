@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private Vector3 moveInput;
 
+    private bool faceRight = true;
+
+    public bool IsFaceRight => faceRight;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,15 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveInput = new Vector3(moveX, moveY, 0).normalized;
+
+        if (moveX > 0 && !faceRight)
+        {
+            Flip();
+        }
+        else if (moveX < 0 && faceRight)
+        {
+            Flip();
+        }
     }
 
     private void FixedUpdate()
@@ -31,5 +43,12 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = moveInput * moveSpeed;
     }
 
+    void Flip()
+    {
+        faceRight = !faceRight;
 
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
 }
