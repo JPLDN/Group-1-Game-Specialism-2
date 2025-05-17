@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.U2D;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
@@ -36,36 +38,26 @@ public class PlayerShoot : MonoBehaviour
             Debug.Log("Spread shot active! Shooting 3 bullets.");
 
            
-            FireBullet(shootingPoint.forward);
-            FireBullet(Quaternion.Euler(0, 30, 0) * shootingPoint.forward);
-            FireBullet(Quaternion.Euler(0, -30, 0) * shootingPoint.forward);
+            FireBullet(shootingPoint.right);
+            FireBullet(Quaternion.Euler(0, 0, 30) * shootingPoint.right);
+            FireBullet(Quaternion.Euler(0, 0, -30) * shootingPoint.right);
         }
         else
         {
-            FireBullet(shootingPoint.forward);
+            FireBullet(shootingPoint.right);
         }
-        Vector3 baseDir = shootingPoint != null
-                      ? shootingPoint.right
-                      : Vector3.right;
 
-        var dirs = new[] {
-    baseDir,
-    Quaternion.Euler(0f,0f,30f) * baseDir,
-    Quaternion.Euler(0f,0f,-30f)* baseDir
-};
-
-        foreach (var d in dirs)
-            Debug.Log($"Dir = {d}");
     }
 
     private void FireBullet(Vector3 direction)
     {
         GameObject newBullet = Instantiate(bullet, shootingPoint.position, Quaternion.LookRotation(direction));
+        newBullet.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         Rigidbody rb = newBullet.GetComponent<Rigidbody>();
 
         if (rb != null)
         {
-            rb.velocity = direction.normalized * 10f;
+            rb.velocity = direction.normalized * 25f;
         }
 
         Debug.Log("Bullet Fired with direction: " + direction);
