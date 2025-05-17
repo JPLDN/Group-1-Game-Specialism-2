@@ -17,6 +17,7 @@ public class SceneSwitcher : MonoBehaviour
     public void SwitchScene()
     {
         // Switches to the next scene in the index
-        SceneManager.LoadScene(currentSceneIndex++);
+        currentSceneIndex++;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
