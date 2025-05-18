@@ -25,7 +25,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime)
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;

@@ -16,6 +16,20 @@ public class Bullet : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D other2D)
+    {
+        if (other2D.CompareTag("Player"))
+        {
+            return;
+        }
+
+        if (other2D.CompareTag("Enemy"))
+        {
+            Destroy(other2D.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -26,10 +40,8 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
-
             Destroy(gameObject);
         }
     }
-
 
 }
