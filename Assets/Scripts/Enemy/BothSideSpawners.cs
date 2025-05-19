@@ -69,9 +69,8 @@ public class BothSideSpawners : MonoBehaviour
                 enemyMovement.StartMoving();
             }
 
-            // Destroy the enemy when it goes off-screen (Optional)
-            // You can add this to prevent the scene from filling up with enemies:
-            // Destroy(enemy, 10f); // Destroys the enemy after 10 seconds (adjust as needed)
+            
+            Destroy(enemy, 12f); 
         }
     }
 

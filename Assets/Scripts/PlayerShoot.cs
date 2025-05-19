@@ -60,7 +60,7 @@ public class PlayerShoot : MonoBehaviour
 
         if (rb != null)
         {
-            rb.velocity = direction.normalized * 20f;
+            rb.velocity = direction.normalized * 30f;
         }
 
         Debug.Log("Bullet Fired with direction: " + direction);
