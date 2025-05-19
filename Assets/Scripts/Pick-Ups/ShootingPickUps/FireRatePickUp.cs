@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireRatePickUp : MonoBehaviour
 {
-    public float duration = 5f;
+    public float duration = 15f;
     public float fireRateMultiplier = 2f;
 
     private void OnTriggerEnter(Collider other)

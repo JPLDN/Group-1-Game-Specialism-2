@@ -8,8 +8,8 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bullet;
     public Transform shootingPoint;
-    public float defaultFireRate = 0.15f;
-    public float fireRate = 0.15f;
+    public float defaultFireRate = 5f;
+    public float fireRate = 1f;
 
     private float nextFireTime = 0f;
     private bool spreadShotEnabled = false;
@@ -25,7 +25,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFireTime)
+        if (Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
@@ -60,7 +60,7 @@ public class PlayerShoot : MonoBehaviour
 
         if (rb != null)
         {
-            rb.velocity = direction.normalized * 25f;
+            rb.velocity = direction.normalized * 20f;
         }
 
         Debug.Log("Bullet Fired with direction: " + direction);
