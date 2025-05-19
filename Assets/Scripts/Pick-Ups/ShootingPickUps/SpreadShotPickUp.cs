@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpreadShotPickUp : MonoBehaviour
 {
+    public float spreadShotDuration = 20f;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -12,7 +13,7 @@ public class SpreadShotPickUp : MonoBehaviour
             if (playerShoot != null)
             {
                 Debug.Log("SpreadShot pickup triggered");
-                playerShoot.EnableSpreadShot();
+                playerShoot.EnableSpreadShot(spreadShotDuration);
             }
             Destroy(gameObject);
         }

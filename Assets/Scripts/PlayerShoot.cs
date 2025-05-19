@@ -66,10 +66,12 @@ public class PlayerShoot : MonoBehaviour
         Debug.Log("Bullet Fired with direction: " + direction);
     }
 
-    public void EnableSpreadShot()
+    public void EnableSpreadShot(float duration)
     {
         Debug.Log("Spread Shot Picked Up!");
         spreadShotEnabled = true;
+
+        StartCoroutine(DisableSpreadShotAfterDuration(duration));
     }
 
     public void StartFireRateBoost(float duration, float multiplier)
@@ -87,6 +89,16 @@ public class PlayerShoot : MonoBehaviour
         yield return new WaitForSeconds(duration);
         fireRate = defaultFireRate;
         isFireRateBoosted = false;
+    }
+
+    private IEnumerator DisableSpreadShotAfterDuration(float duration)
+    {
+        // Wait for the certain duration
+        yield return new WaitForSeconds(duration);
+
+        // Disable the spread shot after set duration
+        spreadShotEnabled = false;
+        Debug.Log("Spread Shot Disabled.");
     }
 
 
