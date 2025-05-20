@@ -60,7 +60,13 @@ public class PlayerShoot : MonoBehaviour
 
         if (rb != null)
         {
-            rb.velocity = direction.normalized * 30f;
+            Vector3 playerVelocity = playerMovement.Velocity;
+
+            Vector3 bulletVelocity = direction.normalized * 30f;
+
+            bulletVelocity.x += playerVelocity.x;
+
+            rb.velocity = bulletVelocity;
         }
 
         Debug.Log("Bullet Fired with direction: " + direction);

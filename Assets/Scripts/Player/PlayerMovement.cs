@@ -13,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
     private bool faceRight = true;
 
     public bool IsFaceRight => faceRight;
+
+    public Vector3 Velocity
+    {
+        get { return rb.velocity; }
+    }
     // Start is called before the first frame update
     void Start()
     {
