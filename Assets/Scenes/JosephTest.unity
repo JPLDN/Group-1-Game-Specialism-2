@@ -676,6 +676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906696829}
   - component: {fileID: 1906696828}
+  - component: {fileID: 1906696830}
   m_Layer: 0
   m_Name: Sea background
   m_TagString: Untagged
@@ -750,6 +751,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1906696830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906696827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9818a7be336ccad43bb97d566a5512e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxFactorY: 0.2
+  cameraTransform: {fileID: 963194228}
 --- !u!1001 &8887880402517990338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -820,10 +835,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
+  - {fileID: 1906696829}
   - {fileID: 705507995}
   - {fileID: 8887880402517990338}
   - {fileID: 93067791}
   - {fileID: 25162178}
   - {fileID: 319649071}
   - {fileID: 898734678}
-  - {fileID: 1906696829}
