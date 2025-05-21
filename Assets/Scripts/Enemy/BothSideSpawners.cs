@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BothSideSpawners : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     public float spawnInterval = 2f;
     public int enemiesToSpawnAtOnce = 3;
     public float spawnDistanceFromCamera = 10f;
@@ -57,7 +57,8 @@ public class BothSideSpawners : MonoBehaviour
             Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0f);
 
             // Spawn the Enemies
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            GameObject selectedPrefab = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
+            GameObject enemy = Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
 
             // Increase the enemy count
             currentEnemyCount++;
