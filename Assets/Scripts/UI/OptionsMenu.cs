@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class OptionsMenu : MonoBehaviour, ISelectHandler
 {
     public GameObject[] menuPanels;
+    public AudioSource uiHover;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class OptionsMenu : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData eventData)
     {
         // Activates the OnClick() event when selected
+        uiHover.Play();
         GetComponent<Button>().onClick.Invoke();
     }
 
