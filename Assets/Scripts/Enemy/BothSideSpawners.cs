@@ -60,6 +60,11 @@ public class BothSideSpawners : MonoBehaviour
             GameObject selectedPrefab = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
             GameObject enemy = Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
 
+            if (side == -1)
+            {
+                enemy.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
+
             // Increase the enemy count
             currentEnemyCount++;
 
