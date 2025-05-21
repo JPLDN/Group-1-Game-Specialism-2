@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -3971439097706918447}
   - component: {fileID: -3952951832029123938}
   - component: {fileID: 1775388064299919654}
+  - component: {fileID: 2421297803278726845}
+  - component: {fileID: 3888242963286857853}
   m_Layer: 0
   m_Name: BossEnemy
   m_TagString: Boss
@@ -141,6 +143,32 @@ MonoBehaviour:
   firePoint: {fileID: 3657168431465816303}
   shootInterval: 1
   projectileSpeed: 30
+--- !u!114 &2421297803278726845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770695811086096482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd34e162c8c385b45b09e8b8d551937a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 0
+  currentHealth: 0
+--- !u!114 &3888242963286857853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770695811086096482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c40e105b99680943a319c5dc8d60147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8990986067574162223
 GameObject:
   m_ObjectHideFlags: 0

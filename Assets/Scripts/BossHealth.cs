@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-    public int totalHealth;
+    public int totalHealth = 20;
     public int currentHealth;
     private SceneSwitcher sceneSwitcher;
 
     // Start is called before the first frame update
     void Start()
     {
-        totalHealth = currentHealth;
+        currentHealth = totalHealth;
         sceneSwitcher = GetComponent<SceneSwitcher>();
     }
     
@@ -23,7 +23,6 @@ public class BossHealth : MonoBehaviour
         // Kills boss when health reaches 0
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
             Invoke("EndFight", 5.0f);
         }
     }
