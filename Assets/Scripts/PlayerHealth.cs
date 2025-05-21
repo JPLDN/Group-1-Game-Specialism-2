@@ -14,6 +14,12 @@ public class PlayerHealth : MonoBehaviour
     public GameObject deathScreen;
     public GameObject autoSelectDeath;
 
+    public AudioSource healthPickup;
+    public AudioSource playerHit;
+    public AudioSource shieldBreak;
+    public AudioSource playerDeath;
+    public AudioSource powerUpPickup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +34,14 @@ public class PlayerHealth : MonoBehaviour
         if (shieldStatus == false)
         {
             // Reduces health if shield is down
+            playerHit.Play();
             currentHealth -= damageTaken;
             UpdateHealth(currentHealth);
         }
         else
         {
             // Disables shield
+            shieldBreak.Play();
             shieldStatus = false;
             UpdateHealth(currentHealth);
         }
@@ -41,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             // Enables death screen when health hits 0
+            playerDeath.Play();
             Time.timeScale = 0;
             deathScreen.SetActive(true);
             // Automatically selects Restart button for keyboard controls
@@ -53,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth < totalHealth)
         {
             // Heals player if health isn't at its max value
+            healthPickup.Play();
             currentHealth += healthObtained;
         }
 
@@ -62,6 +72,7 @@ public class PlayerHealth : MonoBehaviour
     public void ActivateShield()
     {
         // Enables the shield power-up
+        powerUpPickup.Play();
         shieldStatus = true;
         UpdateHealth(currentHealth);
     }
