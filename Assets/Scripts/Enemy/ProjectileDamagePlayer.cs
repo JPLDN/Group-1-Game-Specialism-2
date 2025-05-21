@@ -27,7 +27,7 @@ public class ProjectileDamagePlayer : MonoBehaviour
             PlayerHealth player = other.GetComponent<PlayerHealth>();
             if (player != null)
             {
-                player.TakeDamage(damage);
+                player.TakeDamage(1);
             }
 
             Destroy(gameObject);
