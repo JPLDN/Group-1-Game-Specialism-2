@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Boss"))
         {
             BossHealth boss = other.GetComponent<BossHealth>();
             if (boss != null)
