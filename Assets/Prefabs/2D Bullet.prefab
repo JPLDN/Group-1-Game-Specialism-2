@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5499225421093769966}
   - component: {fileID: 4616156115444917596}
   m_Layer: 0
-  m_Name: 2d circle
+  m_Name: 2D Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

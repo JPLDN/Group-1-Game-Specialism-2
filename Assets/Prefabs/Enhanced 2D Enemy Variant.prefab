@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &741435922252876231
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988300438959815016, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499225421093769966, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_Name
+      value: Enhanced 2D Enemy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -4454332309992060596, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+    - {fileID: 6795029322796149262, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+    - {fileID: 4616156115444917596, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6253300956428238961}
+  m_SourcePrefab: {fileID: 100100000, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+--- !u!1 &7372127246996426189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+  m_PrefabInstance: {fileID: 741435922252876231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6253300956428238961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372127246996426189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce658ee698560d949a728908e9e24891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  zigzagAmplitude: 15
+  zigzagFrequency: 5

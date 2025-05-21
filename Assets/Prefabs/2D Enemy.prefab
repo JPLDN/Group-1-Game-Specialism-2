@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5080416184173792738}
   - component: {fileID: 5375792078424541697}
-  - component: {fileID: 6356118144888666430}
   - component: {fileID: -6616313152318297872}
+  - component: {fileID: 6763587340128291544}
   m_Layer: 7
   m_Name: 2D Enemy
   m_TagString: Enemy
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6356118144888666430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721855501599800128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6145443768594004ea13058e9e2ea1ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  moveDirection: {x: -1, y: 0}
 --- !u!135 &-6616313152318297872
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -121,3 +107,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6763587340128291544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721855501599800128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a661a38a02a85d4380a66950ce971ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  moveDuration: 2.5
+  pauseDuration: 0.3
+  arcHeight: 4
