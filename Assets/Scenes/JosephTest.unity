@@ -471,6 +471,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 7372127246996426189, guid: 8289b4478d6bfde47a6604fb8fd67095, type: 3}
   - {fileID: 4721855501599800128, guid: b126dd92f62d7c1488292478d828c0ab, type: 3}
+  - {fileID: 8401456354728268206, guid: 691272567f13f01419a1df637f70d903, type: 3}
   spawnInterval: 2
   enemiesToSpawnAtOnce: 3
   spawnDistanceFromCamera: 10
