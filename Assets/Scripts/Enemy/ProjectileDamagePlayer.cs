@@ -19,7 +19,7 @@ public class ProjectileDamagePlayer : MonoBehaviour
         transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 
-    void OnTriggerEner(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {

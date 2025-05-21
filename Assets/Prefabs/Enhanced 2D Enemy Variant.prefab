@@ -74,6 +74,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6253300956428238961}
+    - targetCorrespondingSourceObject: {fileID: 7783648039543735306, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3038559810186845983}
   m_SourcePrefab: {fileID: 100100000, guid: 067f15f2c6e0df64d8f8bb6fe5997a6e, type: 3}
 --- !u!1 &7372127246996426189 stripped
 GameObject:
@@ -95,3 +98,15 @@ MonoBehaviour:
   moveSpeed: 5
   zigzagAmplitude: 15
   zigzagFrequency: 5
+--- !u!114 &3038559810186845983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372127246996426189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fef964c0dcf4174694928b057b87808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
