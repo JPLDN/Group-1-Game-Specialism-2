@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 7689908599882699209}
   - component: {fileID: 9035182927054308359}
   - component: {fileID: 5004875617278477861}
+  - component: {fileID: 4732161939571607082}
+  - component: {fileID: 7174166581251957632}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -222,5 +224,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d95cff4739a895e44889de1681a1575d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4732161939571607082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054810153777297536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4cc91ce7886e44989f08443b33f03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 3
+  currentHealth: 0
+  shieldStatus: 0
+  heartsUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  shieldUI: {fileID: 0}
+  deathScreen: {fileID: 0}
+  autoSelectDeath: {fileID: 0}
+--- !u!114 &7174166581251957632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054810153777297536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2147282f9fc574a9bcdff60d95a3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
