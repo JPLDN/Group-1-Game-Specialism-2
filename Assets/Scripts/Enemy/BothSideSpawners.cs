@@ -13,7 +13,7 @@ public class BothSideSpawners : MonoBehaviour
     public float spawnDistanceFromCamera = 10f;
     public int maxEnemiesInScene = 20; // Max Enemy Count
 
-    public int killsToSpawnBoss = 1;
+    public int killsToSpawnBoss = 19;
 
     private Camera mainCamera;
     private int currentEnemyCount = 0; // Tracking the number of enemies
