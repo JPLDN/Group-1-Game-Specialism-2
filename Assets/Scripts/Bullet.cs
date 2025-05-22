@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public EnemySpawn enemySpawner;
+
     private void OnTriggerEnter2D(Collider2D other2D)
     {
         if (other2D.CompareTag("Player"))
@@ -27,9 +29,15 @@ public class Bullet : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
+            if (enemySpawner != null)
+            {
+                Debug.Log("Calling RegisterKill from bullet");
+                enemySpawner.RegisterKill();
+            }
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+
         if (other.CompareTag("Boss"))
         {
             BossHealth boss = other.GetComponent<BossHealth>();

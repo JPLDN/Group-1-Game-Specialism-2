@@ -5,14 +5,21 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
+    public GameObject bossPrefab;  
     public float spawnInterval = 2f;
     public int enemiesToSpawnAtOnce = 3;
     public float spawnDistanceFromCamera = 10f;
+    public Vector3 bossOnScreenPosition;  
 
     private Camera mainCamera;
 
     private int totalSpawnedEnemies = 0;  
     public int maxEnemiesToSpawn = 20;    
+
+    public int killsToSpawnBoss = 20;  
+
+    private int killCount = 0;  
+    private bool bossSpawned = false;  
 
     void Start()
     {
@@ -24,20 +31,27 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
-            // Check if we reached max spawn limit before spawning
-            if (totalSpawnedEnemies >= maxEnemiesToSpawn)
+            // Spawn boss if killCount reached and boss not spawned yet
+            if (!bossSpawned && killCount >= killsToSpawnBoss)
             {
-                yield break;  // no more spawns
+                SpawnBoss();
+                bossSpawned = true;
             }
-
-            // Spawn enemies up to the limit but don't exceed maxEnemiesToSpawn
-            for (int i = 0; i < enemiesToSpawnAtOnce; i++)
+            else
             {
-                if (totalSpawnedEnemies >= maxEnemiesToSpawn)
-                break;
+                // Check if we reached max spawn limit before spawning regular enemies
+                if (totalSpawnedEnemies < maxEnemiesToSpawn)
+                {
+                    // Spawn enemies up to the limit but don't exceed maxEnemiesToSpawn
+                    for (int i = 0; i < enemiesToSpawnAtOnce; i++)
+                    {
+                        if (totalSpawnedEnemies >= maxEnemiesToSpawn)
+                            break;
 
-                SpawnEnemyOffScreen();
-                totalSpawnedEnemies++;
+                        SpawnEnemyOffScreen();
+                        totalSpawnedEnemies++;
+                    }
+                }
             }
 
             yield return new WaitForSeconds(spawnInterval);
@@ -66,5 +80,32 @@ public class EnemySpawn : MonoBehaviour
                 enemyMovement.StartMoving();
             }
         }
+    }
+
+    void SpawnBoss()
+    {
+        if (bossPrefab == null)
+        {
+            Debug.LogWarning("Boss prefab not assigned");
+            return;
+        }
+
+        GameObject boss = Instantiate(bossPrefab, Vector3.zero, Quaternion.identity);
+
+        BossMovement bossMovement = boss.GetComponent<BossMovement>();
+        if (bossMovement != null)
+        {
+            bossMovement.onScreenPosition = bossOnScreenPosition;
+        }
+        else
+        {
+            Debug.Log("Boss prefab missing movement script");
+        }
+    }
+
+    public void RegisterKill()
+    {
+        killCount++;
+        Debug.Log($"Kill count is now: {killCount}");
     }
 }

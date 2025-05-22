@@ -1879,10 +1879,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab:
   - {fileID: 3358163031434422953, guid: 68bc78ae2f3b1ce44828e008b3655573, type: 3}
+  bossPrefab: {fileID: 1770695811086096482, guid: f30ed38f0a195b047ad0225a1fe8b12b, type: 3}
   spawnInterval: 2
   enemiesToSpawnAtOnce: 3
   spawnDistanceFromCamera: 10
+  bossOnScreenPosition: {x: 0, y: 0, z: 0}
   maxEnemiesToSpawn: 20
+  killsToSpawnBoss: 20
 --- !u!4 &862489424
 Transform:
   m_ObjectHideFlags: 0
