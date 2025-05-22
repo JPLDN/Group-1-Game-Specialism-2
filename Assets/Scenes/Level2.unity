@@ -2838,7 +2838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16daa59f3c928b44dbdf9fb1e52d573e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: []
+  enemyPrefab:
+  - {fileID: 4721855501599800128, guid: b126dd92f62d7c1488292478d828c0ab, type: 3}
   bossPrefab: {fileID: 1770695811086096482, guid: f30ed38f0a195b047ad0225a1fe8b12b, type: 3}
   bossOnScreenPosition: {x: 0, y: 0, z: 0}
   spawnInterval: 2
