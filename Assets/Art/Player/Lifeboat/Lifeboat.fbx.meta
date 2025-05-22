@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: 5ff9d6d8d05424542a1ff6b7372b9f97
+guid: db0ffecd803ba1642b1ecfe3946ffa2e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture2_Gun1_BaseColor
+    second: {fileID: 2800000, guid: 78c3e9178bd9ce34aaa347c6c9c0bd99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture2_Gun1_Metallic
+    second: {fileID: 2800000, guid: 0e81f935569ad2347b6e170a7a8de058, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture2_aiStandardSurface1_BaseColor
+    second: {fileID: 2800000, guid: df3c436fa78f4cc4db9beea812619acb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture2_aiStandardSurface1_Metallic
+    second: {fileID: 2800000, guid: 6c2d8f9120276714ea01ad91473bb456, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture2_aiStandardSurface2_BaseColor
+    second: {fileID: 2800000, guid: 10dd28f03f66ba341a01f07bf92c71e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Texture2_aiStandardSurface2_Metallic
+    second: {fileID: 2800000, guid: aff9b2f1e3e53e344ab7becef1eccb94, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
