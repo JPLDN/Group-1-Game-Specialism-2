@@ -1857,7 +1857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862489424}
-  - component: {fileID: 862489423}
+  - component: {fileID: 862489425}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1865,27 +1865,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &862489423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862489422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320dbe3497cb18942bf1ec8ffdc23b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab:
-  - {fileID: 3358163031434422953, guid: 68bc78ae2f3b1ce44828e008b3655573, type: 3}
-  bossPrefab: {fileID: 1770695811086096482, guid: f30ed38f0a195b047ad0225a1fe8b12b, type: 3}
-  spawnInterval: 2
-  enemiesToSpawnAtOnce: 3
-  spawnDistanceFromCamera: 10
-  bossOnScreenPosition: {x: 0, y: 0, z: 0}
-  maxEnemiesToSpawn: 20
-  killsToSpawnBoss: 20
 --- !u!4 &862489424
 Transform:
   m_ObjectHideFlags: 0
@@ -1901,6 +1880,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &862489425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862489422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16daa59f3c928b44dbdf9fb1e52d573e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab:
+  - {fileID: 3358163031434422953, guid: 68bc78ae2f3b1ce44828e008b3655573, type: 3}
+  bossPrefab: {fileID: 1770695811086096482, guid: f30ed38f0a195b047ad0225a1fe8b12b, type: 3}
+  bossOnScreenPosition: {x: 0, y: 0, z: 0}
+  spawnInterval: 2
+  enemiesToSpawnAtOnce: 3
+  spawnDistanceFromCamera: 10
+  maxEnemiesInScene: 20
+  killsToSpawnBoss: 19
 --- !u!1 &925986578
 GameObject:
   m_ObjectHideFlags: 0

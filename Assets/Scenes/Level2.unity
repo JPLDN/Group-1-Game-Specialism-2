@@ -2846,7 +2846,7 @@ MonoBehaviour:
   enemiesToSpawnAtOnce: 3
   spawnDistanceFromCamera: 10
   maxEnemiesInScene: 20
-  killsToSpawnBoss: 1
+  killsToSpawnBoss: 19
 --- !u!4 &1520516667
 Transform:
   m_ObjectHideFlags: 0
