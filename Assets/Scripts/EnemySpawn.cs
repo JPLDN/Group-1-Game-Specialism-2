@@ -11,11 +11,12 @@ public class EnemySpawn : MonoBehaviour
 
     private Camera mainCamera;
 
-    // Start is called before the first frame update
+    private int totalSpawnedEnemies = 0;  
+    public int maxEnemiesToSpawn = 20;    
+
     void Start()
     {
         mainCamera = Camera.main;
-
         StartCoroutine(SpawnEnemies());
     }
 
@@ -23,15 +24,25 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
+            // Check if we reached max spawn limit before spawning
+            if (totalSpawnedEnemies >= maxEnemiesToSpawn)
+            {
+                yield break;  // no more spawns
+            }
+
+            // Spawn enemies up to the limit but don't exceed maxEnemiesToSpawn
             for (int i = 0; i < enemiesToSpawnAtOnce; i++)
             {
+                if (totalSpawnedEnemies >= maxEnemiesToSpawn)
+                break;
+
                 SpawnEnemyOffScreen();
+                totalSpawnedEnemies++;
             }
 
             yield return new WaitForSeconds(spawnInterval);
         }
     }
-
     void SpawnEnemyOffScreen()
     {
         if (mainCamera.orthographic)
@@ -54,12 +65,6 @@ public class EnemySpawn : MonoBehaviour
             {
                 enemyMovement.StartMoving();
             }
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }

@@ -2839,7 +2839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: []
-  bossPrefab: {fileID: 0}
+  bossPrefab: {fileID: 1770695811086096482, guid: f30ed38f0a195b047ad0225a1fe8b12b, type: 3}
   bossOnScreenPosition: {x: 0, y: 0, z: 0}
   spawnInterval: 2
   enemiesToSpawnAtOnce: 3
